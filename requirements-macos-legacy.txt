@@ -1,0 +1,12 @@
+# Legacy macOS compatibility (macOS 10.15 and below)
+requests>=2.31.0
+numpy>=1.21.0
+sounddevice>=0.4.1
+scipy>=1.7.0
+wavio>=0.0.4
+python-dotenv>=0.19.0
+
+# Notes:
+# - sounddevice 0.4.1 works on older macOS
+# - numpy 1.21.0 compatible with Python 3.9
+# - For macOS 10.16+ use requirements.txt instead
