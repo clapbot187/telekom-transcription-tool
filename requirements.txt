@@ -1,0 +1,11 @@
+# Core dependencies
+requests>=2.31.0
+numpy>=1.24.0
+sounddevice>=0.4.6
+scipy>=1.11.0
+
+# Audio processing
+wavio>=0.0.9
+
+# Environment management
+python-dotenv>=1.0.0
