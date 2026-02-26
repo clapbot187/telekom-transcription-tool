@@ -10,15 +10,15 @@ load_dotenv()
 
 class Config:
     WHISPER_MODEL = "whisper-large-v3"
-    GPT_MODEL = "gpt-4"
+    GPT_MODEL = "gpt-4.1-mini"
 
     def __init__(self, config_path: Optional[str] = None):
-        self.api_key: Optional[str] = os.getenv("TELEKOM_API_KEY")
-        self.whisper_endpoint: str = os.getenv(
+        self.api_key: Optional[str] = os.getenv("TRANSCRIPTION_API_KEY")
+        self.WHISPER_ENDPOINT: str = os.getenv(
             "WHISPER_ENDPOINT",
             "https://llm-server.llmhub.t-systems.net/v2/audio/transcriptions"
         )
-        self.gpt_endpoint: str = os.getenv(
+        self.GPT_ENDPOINT: str = os.getenv(
             "GPT_ENDPOINT",
             "https://llm-server.llmhub.t-systems.net/v2/chat/completions"
         )
