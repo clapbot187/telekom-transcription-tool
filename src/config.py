@@ -14,13 +14,14 @@ class Config:
 
     def __init__(self, config_path: Optional[str] = None):
         self.api_key: Optional[str] = os.getenv("TRANSCRIPTION_API_KEY")
+        # Use IP address instead of hostname for corporate firewall compatibility
         self.WHISPER_ENDPOINT: str = os.getenv(
             "WHISPER_ENDPOINT",
-            "https://llm-server.llmhub.t-systems.net/v2/audio/transcriptions"
+            "https://80.158.36.74/v2/audio/transcriptions"
         )
         self.GPT_ENDPOINT: str = os.getenv(
             "GPT_ENDPOINT",
-            "https://llm-server.llmhub.t-systems.net/v2/chat/completions"
+            "https://80.158.36.74/v2/chat/completions"
         )
         self.sample_rate: int = int(os.getenv("SAMPLE_RATE", "16000"))
         self.channels: int = int(os.getenv("CHANNELS", "1"))
